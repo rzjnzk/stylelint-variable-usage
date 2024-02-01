@@ -1,0 +1,7 @@
+@use "./parent"
+
+div
+{
+    background-color: parent.$defined-and-referenced;
+    color: parent.$referenced-not-defined;
+}

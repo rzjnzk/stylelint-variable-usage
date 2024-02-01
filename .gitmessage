@@ -1,0 +1,24 @@
+
+
+#                                              50|                   72|
+# ----------------------------------------------------------------------
+#
+# TEMPLATE
+# ----------------------------------------------------------------------
+# Subject line (imperative mood)               50|
+# 
+# Multi-line description of commit.                                  72|
+# May be detailed.                                                     |
+# ----------------------------------------------------------------------
+#
+# NOTES
+# ----------------------------------------------------------------------
+# - The imperative mood is a grammatical mood that forms a command or 
+#   request. Example: 'Add', 'Remove', 'Fix', `Change`, 'Update', etc.
+#
+# - Begin a commit message with a capital, and do not end it with a
+#   full-stop.
+#
+# - Encapsulate case-sensitive names with backticks; this includes file 
+#   names.
+# ----------------------------------------------------------------------

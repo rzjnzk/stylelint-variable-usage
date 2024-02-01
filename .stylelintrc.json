@@ -1,0 +1,17 @@
+{ 
+    "extends": 
+    [
+        "stylelint-config-standard",
+        "stylelint-config-standard-scss"
+    ],
+    "plugins": 
+    [
+        "stylelint-scss",
+        "./index.js"
+    ],
+    "rules": 
+    {
+        "variable-usage/undefined-vars-scss": [true, { "severity": "error" }],
+        "variable-usage/unused-vars-scss": [true, { "severity": "warning" }]
+    }
+}

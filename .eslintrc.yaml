@@ -1,0 +1,495 @@
+ignorePatterns:
+  - "**/node_modules/**"
+overrides:
+  # `.mjs`.
+  - files:
+      - "**/*.mjs"
+    extends:
+      - eslint:recommended
+    env:
+      node: true
+    parserOptions:
+      sourceType: module
+      ecmaVersion: latest
+    globals:
+      process: true
+    rules:
+      no-debugger: off
+      brace-style:
+        - warn
+        - allman
+        - allowSingleLine: false
+      indent:
+        - warn
+        - 4
+      linebreak-style:
+        - error
+        - unix
+      quotes:
+        - error
+        - double
+      semi:
+        - error
+        - always
+      curly:
+        - warn
+        - all
+      array-bracket-newline:
+        - warn
+        - multiline: true
+          minItems:
+      arrow-body-style:
+        - warn
+        - always
+      array-bracket-spacing:
+        - warn
+        - never
+      no-trailing-spaces:
+        - warn
+        - skipBlankLines: false
+          ignoreComments: false
+      space-before-blocks:
+        - warn
+        - functions: always
+          keywords: always
+          classes: always
+      no-multi-spaces:
+        - warn
+        - ignoreEOLComments: false
+          exceptions: {}
+      keyword-spacing:
+        - warn
+        - before: true
+          after: false
+          overrides:
+            return:
+              after: true
+            import:
+              after: true
+            from:
+              after: true
+            const:
+              after: true
+            let:
+              after: true
+            var:
+              after: true
+      space-before-function-paren:
+        - warn
+        - anonymous: never
+          named: never
+          asyncArrow: never
+      no-multiple-empty-lines:
+        - warn
+        - max: 1
+          maxEOF: 0
+          maxBOF: 0
+      eol-last:
+        - error
+        - always
+      space-infix-ops:
+        - warn
+        - int32Hint: false
+      key-spacing:
+        - warn
+        - beforeColon: false
+          afterColon: true
+          mode: strict
+      no-unused-vars:
+        - off
+        - vars: all
+          args: after-used
+          ignoreRestSiblings: false
+  # `.cjs`, `.js`.
+  - files:
+      - "**/*.cjs"
+      - "**/*.js"
+    extends:
+      - eslint:recommended
+    env:
+      node: true
+      es6: true
+    parserOptions:
+      sourceType: script
+      ecmaVersion: 6
+    globals:
+      process: true
+    rules:
+      no-const-assign: off
+      no-debugger: off
+      brace-style:
+        - warn
+        - allman
+        - allowSingleLine: false
+      indent:
+        - warn
+        - 4
+      linebreak-style:
+        - error
+        - unix
+      quotes:
+        - error
+        - double
+      semi:
+        - error
+        - always
+      curly:
+        - warn
+        - all
+      array-bracket-newline:
+        - warn
+        - multiline: true
+          minItems:
+      arrow-body-style:
+        - warn
+        - always
+      array-bracket-spacing:
+        - warn
+        - never
+      no-trailing-spaces:
+        - warn
+        - skipBlankLines: false
+          ignoreComments: false
+      space-before-blocks:
+        - warn
+        - functions: always
+          keywords: always
+          classes: always
+      no-multi-spaces:
+        - warn
+        - ignoreEOLComments: false
+          exceptions: {}
+      keyword-spacing:
+        - warn
+        - before: true
+          after: false
+          overrides:
+            return:
+              after: true
+            import:
+              after: true
+            from:
+              after: true
+            const:
+              after: true
+            let:
+              after: true
+            var:
+              after: true
+      space-before-function-paren:
+        - warn
+        - anonymous: never
+          named: never
+          asyncArrow: never
+      no-multiple-empty-lines:
+        - warn
+        - max: 1
+          maxEOF: 0
+          maxBOF: 0
+      eol-last:
+        - error
+        - always
+      space-infix-ops:
+        - warn
+        - int32Hint: false
+      key-spacing:
+        - warn
+        - beforeColon: false
+          afterColon: true
+          mode: strict
+      no-unused-vars:
+        - off
+        - vars: all
+          args: after-used
+          ignoreRestSiblings: false
+  # `.ts`.
+  - files:
+      - "**/*.ts"
+    extends:
+      - eslint:recommended
+    parser: "@typescript-eslint/parser"
+    parserOptions:
+      sourceType: module
+      ecmaVersion: latest
+    plugins:
+      - "@typescript-eslint"
+  # `.jsx`.
+  - files:
+      - "**/*.jsx"
+    env:
+      browser: true
+    parserOptions:
+      ecmaFeatures:
+        jsx: true
+      sourceType: module
+      ecmaVersion: latest
+    extends:
+      - eslint:recommended
+      - react-app
+      - react-app/jest
+      - plugin:react/recommended
+    settings:
+      react:
+        version: detect
+    rules:
+      no-debugger: off
+      brace-style:
+        - warn
+        - allman
+        - allowSingleLine: false
+      indent:
+        - warn
+        - 4
+      linebreak-style:
+        - error
+        - unix
+      quotes:
+        - error
+        - double
+      semi:
+        - error
+        - always
+      curly:
+        - warn
+        - all
+      array-bracket-newline:
+        - warn
+        - multiline: true
+          minItems:
+      arrow-body-style:
+        - warn
+        - always
+      array-bracket-spacing:
+        - warn
+        - never
+      no-trailing-spaces:
+        - warn
+        - skipBlankLines: false
+          ignoreComments: false
+      space-before-blocks:
+        - warn
+        - functions: always
+          keywords: always
+          classes: always
+      no-multi-spaces:
+        - warn
+        - ignoreEOLComments: false
+          exceptions: {}
+      keyword-spacing:
+        - warn
+        - before: true
+          after: false
+          overrides:
+            return:
+              after: true
+            import:
+              after: true
+            from:
+              after: true
+            const:
+              after: true
+            let:
+              after: true
+            var:
+              after: true
+      space-before-function-paren:
+        - warn
+        - anonymous: never
+          named: never
+          asyncArrow: never
+      no-multiple-empty-lines:
+        - warn
+        - max: 1
+          maxEOF: 0
+          maxBOF: 0
+      eol-last:
+        - error
+        - always
+      space-infix-ops:
+        - warn
+        - int32Hint: false
+      key-spacing:
+        - warn
+        - beforeColon: false
+          afterColon: true
+          mode: strict
+      no-unused-vars:
+        - off
+        - vars: all
+          args: after-used
+          ignoreRestSiblings: false
+      react/jsx-indent:
+        - warn
+        - 4
+      react/jsx-indent-props:
+        - warn
+        - 4
+      react/react-in-jsx-scope: off
+      react/jsx-uses-react: off
+      react/prop-types:
+        - off
+      react/jsx-closing-bracket-location:
+        - warn
+        - tag-aligned
+      react/jsx-curly-spacing:
+        - warn
+        - when: never
+      react/jsx-wrap-multilines:
+        - error
+        - declaration: parens-new-line
+          assignment: parens-new-line
+          return: parens-new-line
+          arrow: parens-new-line
+          condition: parens-new-line
+          logical: parens-new-line
+          prop: parens-new-line
+      react/jsx-closing-tag-location:
+        - warn
+      react/jsx-tag-spacing:
+        - error
+        - closingSlash: never
+          beforeSelfClosing: never
+          afterOpening: never
+          beforeClosing: never
+      react/jsx-filename-extension:
+        - warn
+        - extensions:
+            - .jsx
+            - .tsx
+  # `.tsx`.
+  - files:
+      - "**/*.tsx"
+    extends:
+      - eslint:recommended
+    parser: "@typescript-eslint/parser"
+    plugins:
+      - "@typescript-eslint"
+      - react
+    settings:
+      react:
+        version: detect
+    rules:
+      no-debugger: off
+      brace-style:
+        - warn
+        - allman
+        - allowSingleLine: false
+      indent:
+        - warn
+        - 4
+      linebreak-style:
+        - error
+        - unix
+      quotes:
+        - error
+        - double
+      semi:
+        - error
+        - always
+      curly:
+        - warn
+        - all
+      array-bracket-newline:
+        - warn
+        - multiline: true
+          minItems:
+      arrow-body-style:
+        - warn
+        - always
+      array-bracket-spacing:
+        - warn
+        - never
+      no-trailing-spaces:
+        - warn
+        - skipBlankLines: false
+          ignoreComments: false
+      space-before-blocks:
+        - warn
+        - functions: always
+          keywords: always
+          classes: always
+      no-multi-spaces:
+        - warn
+        - ignoreEOLComments: false
+          exceptions: {}
+      keyword-spacing:
+        - warn
+        - before: true
+          after: false
+          overrides:
+            return:
+              after: true
+            import:
+              after: true
+            from:
+              after: true
+            const:
+              after: true
+            let:
+              after: true
+            var:
+              after: true
+      space-before-function-paren:
+        - warn
+        - anonymous: never
+          named: never
+          asyncArrow: never
+      no-multiple-empty-lines:
+        - warn
+        - max: 1
+          maxEOF: 0
+          maxBOF: 0
+      eol-last:
+        - error
+        - always
+      space-infix-ops:
+        - warn
+        - int32Hint: false
+      key-spacing:
+        - warn
+        - beforeColon: false
+          afterColon: true
+          mode: strict
+      no-unused-vars:
+        - off
+        - vars: all
+          args: after-used
+          ignoreRestSiblings: false
+      react/jsx-indent:
+        - warn
+        - 4
+      react/jsx-indent-props:
+        - warn
+        - 4
+      react/react-in-jsx-scope: off
+      react/jsx-uses-react: off
+      react/prop-types:
+        - off
+      react/jsx-closing-bracket-location:
+        - warn
+        - tag-aligned
+      react/jsx-curly-spacing:
+        - warn
+        - when: never
+      react/jsx-wrap-multilines:
+        - error
+        - declaration: parens-new-line
+          assignment: parens-new-line
+          return: parens-new-line
+          arrow: parens-new-line
+          condition: parens-new-line
+          logical: parens-new-line
+          prop: parens-new-line
+      react/jsx-closing-tag-location:
+        - warn
+      react/jsx-tag-spacing:
+        - error
+        - closingSlash: never
+          beforeSelfClosing: never
+          afterOpening: never
+          beforeClosing: never
+      react/jsx-filename-extension:
+        - warn
+        - extensions:
+            - .jsx
+            - .tsx
