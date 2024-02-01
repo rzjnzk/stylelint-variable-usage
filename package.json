@@ -1,10 +1,14 @@
 {
   "name": "stylelint-variable-usage",
-  "version": "1.0.0",
-  "description": "Provides rules for `stylelint` to detect `undefined-vars` and `unused-vars` in `.scss` files.",
+  "version": "0.0.1",
+  "description": "A `stylelint` plugin that provides rules to detect `undefined-vars` and `unused-vars` in `.scss` files.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rzjnzk/stylelint-variable-usage.git"
   },
   "keywords": [
     "stylelint",
@@ -15,8 +19,13 @@
   ],
   "author": "https://github.com/rzjnzk",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rzjnzk/stylelint-variable-usage/issues"
+  },
+  "homepage": "https://github.com/rzjnzk/stylelint-variable-usage#readme",
   "devDependencies": {
     "eslint": "^8.56.0",
+    "stylelint": "^16.2.1",
     "stylelint-config-standard": "^36.0.0",
     "stylelint-config-standard-scss": "^13.0.0",
     "stylelint-scss": "^6.1.0"
